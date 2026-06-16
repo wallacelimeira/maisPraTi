@@ -42,21 +42,21 @@ async function main() {
     if (op === "1") {
       const nome = await pergunta("Nome do documento: ");
       if (!nome.trim()) {
-        console.log("  ✗ Nome inválido.");
+        console.log("  Nome inválido.");
       } else {
         fila.enqueue(nome.trim());
-        console.log(`  ✓ "${nome.trim()}" adicionado.`);
+        console.log(`  "${nome.trim()}" adicionado.`);
         mostrarFila();
       }
 
     } else if (op === "2") {
       if (fila.isEmpty()) {
-        console.log("  ✗ Não há tarefas na fila.");
+        console.log("  Não há tarefas na fila.");
       } else {
         const doc = fila.dequeue();
         console.log(`  🖨  Imprimindo: "${doc}"`);
         if (fila.isEmpty()) {
-          console.log("  ✓ Não há mais tarefas na fila.");
+          console.log("  Não há mais tarefas na fila.");
         } else {
           mostrarFila();
         }
@@ -69,7 +69,7 @@ async function main() {
       sair = true;
 
     } else {
-      console.log("  ✗ Opção inválida.");
+      console.log("  Opção inválida.");
     }
   }
 

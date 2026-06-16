@@ -23,7 +23,7 @@ async function main() {
   const vendas = entrada.split(",").map(v => Number(v.trim())).filter(v => !Number.isNaN(v));
 
   if (vendas.length === 0) {
-    console.log("  ✗ Nenhum valor válido inserido.\n");
+    console.log("  Nenhum valor válido inserido.\n");
   } else {
     const total = calcularVendas(vendas);
     console.log(`\n  Vendas: [ ${vendas.join(" | ")} ]`);

@@ -23,7 +23,7 @@ async function main() {
   const notas = entrada.split(",").map(n => Number(n.trim())).filter(n => !Number.isNaN(n));
 
   if (notas.length === 0) {
-    console.log("  ✗ Nenhuma nota válida inserida.\n");
+    console.log("  Nenhuma nota válida inserida.\n");
   } else {
     const media = calcularMedia(notas);
     console.log(`\n  Notas: [ ${notas.join(" | ")} ]`);

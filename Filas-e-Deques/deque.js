@@ -49,28 +49,28 @@ async function main() {
 
     if (op === "1") {
       const val = await pergunta("Valor para addFront: ");
-      if (!val.trim()) { console.log("  ✗ Valor inválido."); continue; }
+      if (!val.trim()) { console.log("  Valor inválido."); continue; }
       deque.addFront(val.trim());
-      console.log(`  ✓ "${val.trim()}" inserido na frente.`);
+      console.log(`  "${val.trim()}" inserido na frente.`);
       mostrarDeque();
 
     } else if (op === "2") {
       const val = await pergunta("Valor para addBack: ");
-      if (!val.trim()) { console.log("  ✗ Valor inválido."); continue; }
+      if (!val.trim()) { console.log("  Valor inválido."); continue; }
       deque.addBack(val.trim());
-      console.log(`  ✓ "${val.trim()}" inserido no fundo.`);
+      console.log(`  "${val.trim()}" inserido no fundo.`);
       mostrarDeque();
 
     } else if (op === "3") {
-      if (deque.isEmpty()) { console.log("  ✗ Deque vazio."); continue; }
+      if (deque.isEmpty()) { console.log("  Deque vazio."); continue; }
       const r = deque.removeFront();
-      console.log(`  ✓ Removido da frente: "${r}"`);
+      console.log(`  Removido da frente: "${r}"`);
       mostrarDeque();
 
     } else if (op === "4") {
-      if (deque.isEmpty()) { console.log("  ✗ Deque vazio."); continue; }
+      if (deque.isEmpty()) { console.log("  Deque vazio."); continue; }
       const r = deque.removeBack();
-      console.log(`  ✓ Removido do fundo: "${r}"`);
+      console.log(`  Removido do fundo: "${r}"`);
       mostrarDeque();
 
     } else if (op === "5") {
@@ -88,7 +88,7 @@ async function main() {
       sair = true;
 
     } else {
-      console.log("  ✗ Opção inválida.");
+      console.log("  Opção inválida.");
     }
   }
 

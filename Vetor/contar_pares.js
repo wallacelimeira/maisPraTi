@@ -25,7 +25,7 @@ async function main() {
   const array = entrada.split(",").map(n => Number(n.trim())).filter(n => !Number.isNaN(n));
 
   if (array.length === 0) {
-    console.log("  ✗ Nenhum número válido inserido.\n");
+    console.log("  Nenhum número válido inserido.\n");
   } else {
     const pares = contarPares(array);
     console.log(`\n  Array: [ ${array.join(" | ")} ]`);
